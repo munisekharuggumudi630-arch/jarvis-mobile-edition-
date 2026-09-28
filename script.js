@@ -1,4 +1,4 @@
-// ===== 1. API KEY =====
+ // ===== 1. API KEY =====
 let API_KEY = localStorage.getItem('jarvis_key');
 if (!API_KEY) {
     API_KEY = prompt('Enter your Gemini API Key:');
@@ -86,7 +86,8 @@ async function fetchToolJson(url, options = {}, timeoutMs = 10000) {
     } finally {
         if (timeoutId) clearTimeout(timeoutId);
     }
-}async function handleTools(text) {
+}
+[28/09, 9:29 pm] looser of karna: async function handleTools(text) {
     const t = text.toLowerCase();
 
     if (
@@ -232,7 +233,8 @@ async function fetchToolJson(url, options = {}, timeoutMs = 10000) {
             return 'Search error, Boss.';
         }
     }
-}// ===== 3.5. AGENT MODE ENGINE =====
+}
+[28/09, 9:29 pm] looser of karna: // ===== 3.5. AGENT MODE ENGINE =====
 const AGENT_TOOLS = Object.freeze({
     time: async () => handleTools('current time'),
     weather: async () => handleTools('weather'),
@@ -376,4 +378,4 @@ async function callGemini(p) {
             // Try next model
         }
     }
-}
+        }
